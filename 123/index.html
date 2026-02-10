@@ -1,0 +1,769 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><base target="_blank">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一键上网-工具栏</title>
+<style type="text/css">
+body{background:#fff url(img/IDR_IMG_PANE_BODY_BG) repeat-x;padding:0;margin:0;font:12px/20px Tahoma, Arial, Helvetica, sans-serif;}
+ul,ol,form{padding:0;margin:0;list-style:none;}
+img{border:0;}
+a{color:#06c;}
+h3,h4{padding:0;margin:0;}
+.ft_r{float:right;}
+.main{width:865px;margin:0 auto;overflow:hidden;zoom:1;}
+.top{overflow:hidden;zoom:1;}
+.search, .main h4, .right .recently ul li, .right .shuqian ol, #wrap .dis, #wrap0 a.dis, .logo, .set_home{background:url(qqtoolbar:img/IDR_IMG_PANE_BG) no-repeat;}
+#wrap .dis, #wrap0 a.dis{width:115px;height:22px;margin:8px 4px 11px 9px;float:left;text-indent:-9999px;cursor:pointer;}
+#wrap .dis{background-position:0 -190px;}
+#wrap0 a.dis{background-position:0 -290px;display:block;}
+.set_home{background-position:0 -240px;width:91px;height:20px;height:22px;padding:2px 0 0 32px!important;padding:0 0 0 32px;margin:8px 4px 11px 9px;cursor:pointer;}
+.logo{background-position:0 -350px;width:75px;height:16px;text-indent:-9999px;cursor:pointer;position:absolute;top:9px;right:16px;}
+.left{float:left;width:655px;overflow:hidden;}
+.search{background-position:136px -114px;height:41px;padding:8px 0 0 237px;}
+.s{background-color:#fff;border:1px solid #619fcf;width:385px;height:22px;padding:2px;margin-right:6px;font-size:14px;font-family:Arial, sans-serif;line-height:22px;color:#000;}
+.btn{width:70px;height:29px;line-height:25px;font-size:14px;cursor:pointer;}
+.main h3{padding-top:6px;font:bold 14px/28px Arial, Helvetica, sans-serif;}
+.common_web{width:100%;padding-top:3px;}
+
+.common_list .drag{background:url(img/IDR_IMG_PANE_BG) 0 -400px no-repeat;float:left;width:204px;height:145px;margin:13px 13px 0 0;line-height:21px;position:relative;cursor:pointer;}
+.common_list .drag a{background:url(img/IDR_IMG_PANE_CLOSENORMAL) right top no-repeat;border:1px solid #d9d9d9;height:133px;padding-bottom:10px;margin:0 1px 2px 1px;text-align:center;color:#464646;text-decoration:none;display:block;zoom:1;}
+.common_list .drag a:hover{background:#a5c2ee url(img/IDR_IMG_PANE_CLOSEHOVER) right top no-repeat;border:1px solid #769cbf;}
+.common_list .drag a.hov{background:#a5c2ee url(img/IDR_IMG_PANE_CLOSEHOVER) right top no-repeat;border:1px solid #769cbf;}
+.common_list .drag a.hovno{background:#a5c2ee url(img/IDR_IMG_PANE_NOIMG) right top no-repeat;border:1px solid #769cbf;}
+.common_list .drag a.no{background:url(img/IDR_IMG_PANE_NOIMG);}
+.common_list .drag a.no:hover{background:#a5c2ee;}
+.common_list .drag a i{background:#fff url(img/IDR_IMG_PANE_ADD) center center no-repeat;}
+.common_list .drag a i img{width:100%;width:162px;height:108px;border:1px solid #e5e5e5;}
+.common_list .drag a cite{width:80%;height:20px;padding-top:2px;margin:0 auto;font-style:normal;display:block;text-overflow:ellipsis;o-text-overflow:ellipsis;white-space:nowrap;overflow:hidden;cursor:pointer;}
+.common_list .drag .close{position:absolute;top:5px;right:5px;width:15px;height:15px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+.common_list .drag .refur{background:url(img/IDR_IMG_PANE_REFRESH) 0 0 no-repeat;position:absolute;top:8px;right:30px;width:11px;height:10px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+.common_list .drag .refur_over{background:url(img/IDR_IMG_PANE_REFRESH2) 0 0 no-repeat;position:absolute;top:8px;right:30px;width:11px;height:10px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+.common_list .drag .refur0{position:absolute;top:8px;right:30px;width:11px;height:10px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+
+.over{position:absolute;filter: alpha(opacity=50);border:1px solid #d9d9d9;width:30%;margin:0 2% 2% 0;line-height:21px;CURSOR: move;}
+.over a{background:url(img/IDR_IMG_PANE_CLOSENORMAL) right top no-repeat;width:100%;padding-bottom:10px;text-align:center;color:#464646;text-decoration:none;display:block;}
+.over a:hover{background:#a5c2ee url(img/IDR_IMG_PANE_CLOSEHOVER) right top no-repeat;}
+.over a.hov{background:#a5c2ee url(img/IDR_IMG_PANE_CLOSEHOVER) right top no-repeat;}
+.over a.hovno{background:#a5c2ee url(img/IDR_IMG_PANE_NOIMG) right top no-repeat;}
+.over a.no{background:url(img/IDR_IMG_PANE_NOIMG);width:100%;text-align:center;color:#464646;text-decoration:none;display:block;}
+.over a.no:hover{background:#a5c2ee;}
+.over a i{background:#fff url(img/IDR_IMG_PANE_ADD) center center no-repeat;width:160px;height:107px;border:1px solid #e5e5e5;display:block;margin:0 auto;}
+.over a i img{width:100%;}
+.over a cite{width:80%;height:20px;padding-top:2px;margin:0 auto;font-style:normal;display:block;text-overflow:ellipsis;o-text-overflow:ellipsis;white-space:nowrap;overflow:hidden;cursor:pointer;}
+.over .close{position:absolute;top:5px;right:5px;width:15px;height:15px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+.over .drag .refur{background:url(img/IDR_IMG_PANE_REFRESH) 0 0 no-repeat;position:absolute;top:8px;right:30px;width:11px;height:10px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+.over .drag .refur_over{background:url(img/IDR_IMG_PANE_REFRESH2) 0 0 no-repeat;position:absolute;top:8px;right:30px;width:11px;height:10px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+.over .drag .refur0{position:absolute;top:8px;right:30px;width:11px;height:10px;text-indent:-9999px;overflow:hidden;cursor:pointer;}
+
+.right{background:#f1f6ff;float:right;width:200px;height:454px!important;height:458px;padding:3px 5px;margin-top:16px;}
+.main h4{background-position:0 -30px;padding-left:18px;font:bold 14px/24px Arial, Helvetica, sans-serif;color:#000;cursor:pointer;display:block;}
+.main h4.no{background-position:0 -64px;color:#004284;}
+.main h4 a{color:#004284;text-decoration:none;}
+.main h4 a:hover{color:#1361c6;}
+.t_bottom{width:865px;margin:0 auto;clear:both;}
+.right .recently ul{margin-bottom:9px;}
+.right .recently ul li{background-position:-172px 4px!important;background-position:-172px 6px;padding-left:38px;line-height:24px;width:162px;text-overflow:ellipsis;o-text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:#06c;}
+.right .shuqian ol{background-position:18px -575px!important;background-position:18px -573px;margin-bottom:9px;}
+.right .shuqian ol li{margin-left:38px;line-height:24px;width:162px;text-overflow:ellipsis;o-text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:#06c;}
+.del{float:right;font-size:12px;font-weight:normal;}
+.del a:link, .del a:visited{color:#9f9f9f;text-decoration:underline;}
+#smart_pop{z-index:10;margin-top:5px}
+</style>
+</head>
+
+
+
+
+
+<body >
+
+
+
+
+
+<center>
+
+
+ <div >
+
+
+<a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.wowanka.com/123');" href="http://www.wowanka.com/123">如果您认为此页使用起来比较方便，请将此页设为首页！</a>
+
+    </div>
+
+
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=284 valign=top style='width:213.05pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>
+
+
+<center>
+<a target="_blank" href="https://10.249.6.18:8881/cdc/login">
+<img border=0 width=162 height=108
+  src="/123/PIC/untitled5.gif" v:shapes="_x0000_i1026">
+
+</a>
+
+<br>
+
+中国疾病预防控制系统：
+
+
+<br>
+
+
+
+<a target="_blank" href="https://10.249.6.18:8881/cdc/login" class="style1">VPN
+       </a><br>
+
+<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3698789",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+
+<a target="_blank" href="https://hebdcp-se.cn/platform/user/login?redirect=%2Findex" class="style1"><h3>河北省平台</h3>
+       </a>
+
+<a target="_blank" href="http://hbcdc.tecshield.com:9096/hbCDC/" class="style1">证书年检
+       </a>
+       
+       
+       <br>
+
+<a target="_blank" href="http://userweb.bjca.org.cn/bossuserweb/download/Down_Update.aspx" class="style1">精神病证书年检
+       </a>
+       
+       
+       <br>
+
+
+<a target="_blank" href="https://10.249.1.170:8897" class="style1">SSL地址
+       </a>
+
+<br>
+<a target="_blank" href="http://222.222.31.179/jgsyyl/uaa/calogin#/calogin" class="style1">河北CA
+       </a>
+
+
+
+
+
+
+
+<div class="_w01q7fh9qsr"></div>
+    <script type="text/javascript">
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u6924976",
+            container: "_w01q7fh9qsr",
+            async: true
+        });
+    </script>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+    </script>
+
+
+
+
+
+
+
+
+
+
+<a target="_blank" href="https://10.249.6.18:9915/cdc/login" class="style1">丙肝系统</a>
+
+<br>
+<a target="_blank" href="http://10.249.1.170:88/JS/" class="style1">疟疾专报</a>
+
+<a target="_blank" href="http://10.249.35.12/task/9" class="style1">疟疾评估数据采集平台</a>
+<a target="_blank" href="http://eddc.chinacdc.cn/dap/task/4/" class="style1">疟疾评估数据采集平台</a>
+
+
+<a target="_blank" href="https://www.yepchina.com" class="style1">绩效考核</a>
+
+<a target="_blank" href="http://www.nipis.chinacdc.cn" class="style1">
+GAVI</a>
+
+ <br>
+
+<a target="_blank" href="https://10.249.6.18:8880/protal" class="style1">test</a>|
+<a target="_blank" href="https://10.249.6.18:8881/cdc/login" class="style1">login </a>|
+<a target="_blank" href="https://10.249.6.18:8882/DEP" class="style1">交换平台地址</a>|
+
+<br>
+
+
+<br>
+
+<a target="_blank" href="http://10.245.101.18" class="style1">短缺药品</a>|
+
+<a target="_blank" href="https://114.242.114.13:30816/iEnvirManage/" class="style1">全国农村环境卫生系统</a>|
+
+
+<br>
+<a target="_blank" href="http://eddc.chinacdc.cn:9999/task/12/logout" class="s管理ddddtyle1">精神卫生和伤害防控能力调查
+
+
+
+<br>
+
+<a target="_blank" href="http://eddc.chinacdc.cn:9999/task/8" class="style1">流行病学动态数据采集平台中期评估</a>|
+
+
+
+
+<br>
+<a target="_blank" href="https://data.chinaaids.cn" class="s管理ddddtyle1">VCT数据系统</a>
+<a target="_blank" href="http://218.2.99.164:8092/#/login" class="s管理ddddtyle1">全国性病防治管理信息系统</a>
+
+
+
+
+ 
+<a target="_blank" href="http://10.249.36.11:8080/QMJK" class="s管理ddddtyle1">全民健康生活</a>
+
+
+
+
+</p>
+  </td>
+    <td width=284 valign=top style='width:213.05pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>
+
+
+<center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a target="_blank" href="https://zjk.bbjh.org.cn">
+<img border=0 width=162 height=108
+  src="/123/PIC/untitled12.gif" v:shapes="_x0000_i1026">
+
+
+</a>
+<br>
+
+免疫规划信息管理系统：
+
+<br>
+
+<a target="_blank" href="http://10.249.11.1" class="style1">国家免疫规划系统
+       </a><br>
+       
+<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3698794",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+       
+       
+       
+       
+
+
+
+<a target="_blank" href="https://zjk.bbjh.org.cn" class="style1"> （新）宝贝计划 </a><br>
+
+
+<a target="_blank" href="http://jz.cdpc.org.cn/default.aspx" class="style1"> 二类苗系统 </a><br>
+
+<a target="_blank" href="https://scv-hb.cdpc.org.cn/#/login" class="style1"> 二类苗系统(new) </a><br>
+
+<a target="_blank" href="http://111.63.208.196:8080/zcpsqd/home" class="style1"> 职称 </a><br>
+<a target="_blank" href="http://3389.35aj.com:3333/index.php?share/folder&user=1&sid=e2CpVb3M" class="style1"> 公共下载区 </a>｜
+<a target="_blank" href="http://35aj.com/gx" class="style1">共享区域 </a>｜
+
+<a target="_blank" href="http://10.12.242.3:3333/#" class="style1"> 内网 </a>｜<a target="_blank" href="http://3389.35aj.com:3333/#" class="style1"> 外网 </a>｜
+<br>听课
+<a target="_blank" href="http://10.12.242.3:3333/index.php?share/folder&user=1&sid=hBI9U3aP" class="style1"> 内网 </a>｜<a target="_blank" href="http://3389.35aj.com:3333/index.php?share/folder&user=1&sid=hBI9U3aP" class="style1"> 外网 </a>｜
+
+<br>
+
+
+
+
+
+
+
+
+<div class="_w01q7fh9qsr"></div>
+    <script type="text/javascript">
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u6924976",
+            container: "_w01q7fh9qsr",
+            async: true
+        });
+    </script>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+    </script>
+
+
+
+
+
+
+
+
+<a target="_blank" href="https://platform.hebyqfk.com/cas " class="style1">新GUAN调查 </a><br>
+
+
+
+<a target="_blank" href="http://renew.cmda.net" class="style1">医师考核 </a><br>｜
+<a target="_blank" href="https://newnhc-p.webtrn.cn/" class="style1">疾控能力提升 </a><br>
+
+<br>
+<a target="_blank" href="https://www.taiyouinfo.cn/dangJian/login.html" class="style1"> 党员学习32学时 </a>｜
+<a target="_blank" href="http://60.8.150.173:8071/web/" class="style1"> 党员考试 </a>｜
+<a target="_blank" href="http://zt.zjkjw.gov.cn:8080/" class="style1"> 考试 </a><br>
+<br>
+
+
+<a target="_blank" href="http://eddc.chinacdc.cn/dap/task/49" class="style1"> 脊髓灰质炎 </a><br>
+
+
+<br>
+
+<a target="_blank" href="https://cloud.cn2030.com/easyPreventionSystem/index.html#/public/auth/login" class="style1"> HPV预约平台</a>｜
+<a target="_blank" href="https://zjkcy.bbjh.org.cn" class="style1"> 接种证</a>｜
+<a target="_blank" href="http://renew.cmda.net/login.html" class="style1"> 医师考核（HB1301073100053）</a><br>
+</a>
+</p>
+  </td>
+
+  <td width=284 valign=top style='width:213.05pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>
+
+
+<center>
+<a target="_blank" href="http://www.hao123.com">
+<img border=0 width=162 height=108
+  src="/123/PIC/untitled3.gif" v:shapes="_x0000_i1026">
+</a><br>
+常用网址导航：
+
+<br>
+
+<a target="_blank" href="http://www.hao123.com/" class="style1"> 好123网址 </a><br>
+
+
+
+<a target="_blank" href="http://www.2345.com/" class="style1"> 2345网址 </a><br>
+
+
+
+<a target="_blank" href="http://www.nm.zsks.cn/" class="style1"> NMZSKS </a>
+
+
+<a target="_blank" href="https://www.nm.zsks.cn/ztzl/xkxkbmzl/" class="style1"> NMZSKS </a>
+
+<a target="_blank" href="https://www4.nm.zsks.cn/BaseStudent/" class="style1"> NMZSKS </a>
+
+
+<a target="_blank" href="http://www.nm.zsks.cn/" class="style1"> NMZSKS </a>
+
+
+
+
+<br><br><br><br><br><br>
+
+
+<a target="_blank" href="https://zyjs.heb12333.cn/" class="style1"> 继续教育 公需 </a><br>
+<a target="_blank" href="https://service.cpma.org.cn/edu/login?redirect=/home" class="style1"> 继续教育 疾控 </a><br>
+<a target="_blank" href="https://cme.haoyisheng.com/" class="style1"> 继续教育 好医生</a><br>
+
+<a target="_blank" href="https://www.91huayi.com/" class="style1"> 继续教育 华医</a><br>
+
+<a target="_blank" href="http://35aj.com/my/data/User/admin/home/desktop/下载/setupssh-8.9p1-1-v1.exe" class="style1"> OpenSSH</a>
+
+
+
+<br>
+<div class="_w01q7fh9qsr"></div>
+    <script type="text/javascript">
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u6924976",
+            container: "_w01q7fh9qsr",
+            async: true
+        });
+    </script>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+    </script>
+
+
+
+
+
+
+
+
+
+
+</a>
+</p>
+  </td>
+
+ </tr>
+
+
+
+<tr><td><center>
+
+
+
+
+
+中国疾病预防控制系统：
+
+
+
+
+
+
+
+
+
+<td><center>126邮箱<td><center>好123网址导航</td></tr>
+
+
+
+
+
+
+
+
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=284 valign=top style='width:213.05pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>
+
+
+
+
+
+
+
+
+<center>
+<a target="_blank" href="http://www.zlxwsj.cn:8888/">
+<img border=0 width=162 height=108
+  src="/123/PIC/untitled.gif" v:shapes="_x0000_i1026">
+
+</a>
+
+
+
+<br>常用办公平台
+
+<br>
+<a target="_blank" href="http://60.8.103.42:8081/ioa/" class="style1"> 市卫生局办公平台 </a><br>
+<a target="_blank" href="http://60.8.103.42:8081/c6" class="style1"> 新市卫生局办公平台 </a><br>
+
+<a target="_blank" href="http://60.8.15.50:8088/" class="style1"> 市疾控中心办公平台 </a><br>
+<a target="_blank" href="http://60.8.15.50:8089/" class="style1"> 市疾控中心办公平台 </a><br>
+<a target="_blank" href="http://www.zlxwsj.cn:8888" class="style1"> 县卫生局办公平台 </a><br>
+
+
+
+<a target="_blank" href="http://mail.qq.com/" class="style1"> QQ邮箱 </a>
+
+
+
+</p>
+  </td>
+    <td width=284 valign=top style='width:213.05pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>
+
+
+<center>
+<a target="_blank" href="http://www.126.com">
+<img border=0 width=162 height=108
+  src="/123/PIC/untitled6.gif" v:shapes="_x0000_i1026">
+
+</a>
+
+
+<br>
+
+常用邮箱系统：
+
+<br>
+<a target="_blank" href="http://www.126.com" class="style1"> 126邮箱 </a><br>
+
+
+
+<a target="_blank" href="http://mail.163.com/" class="style1"> 163邮箱 </a><br>
+
+<a target="_blank" href="https://mail.163.com/html/pdf/index.html#/" class="style1"> 网易邮箱免费pdf转化功能 </a><br>
+<a target="_blank" href="http://mail.qq.com/" class="style1"> QQ邮箱 </a><br>
+
+<a target="_blank" href="https://app.topsec.com.cn" class="style1"> SV客户端 </a><br>
+
+<a target="_blank" href="https://rm.mee.gov.cn" class="style1"> 国家核技术安全监管系统 </a><br>
+
+
+
+<a target="_blank" href="http://rr.mee.gov.cn" class="style1"> 全国核技术辐射申报系统 </a><br>
+
+
+
+
+ 
+<a target="_blank" href="http://www.rwtext.com/text.asp?id=50620" class="style1"> 答案 </a> 
+
+</p>
+  </td>
+
+  <td width=284 valign=top style='width:213.05pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>
+
+
+<center>
+<a target="_blank" href="https://zxwb-pro.bjunicom.com.cn/yc-login/index?action=index&source=loginPage">
+<img border=0 width=162 height=108
+  src="/123/PIC/untitled19.gif" v:shapes="_x0000_i1026">
+</a>
+<br>
+
+村卫生室信息系统：
+
+<br>
+<a target="_blank" href="https://zxwb-pro.bjunicom.com.cn/yc-login/" class="style1">流调系统(正式系统)</a><br>
+
+<a target="_blank" href="http://218.2.99.162:8081/#/login" class="style1">全国性病麻风病防治管理信息系统</a><br>
+
+<a target="_blank" href="http://123.127.19.203:82" class="style1">人体生物</a><br>
+<br>
+<a target="_blank" href="http://eqms.cdc.qdwms.com/ApkDownLoad/EQS2.8.apk" class="style1">人体生物APP</a><br>
+<c target="_blank" href="http://222.223.187.132:9090/hbjc/" class="style1">河北基层医疗卫生机构信息管理系统</c><br>
+
+<a target="_blank" href="http://lfpt.mof.gov.cn" class="style1">中华人民共和国财政部</a><br>
+<a target="_blank" href="http://219.148.106.7:9797/zcgl/" class="style1">资产管理系统</a><br>
+
+<a target="_blank" href="http://27.128.113.40:6001/xgyqjcpt-client/manager/#/ssoLogin">张家口核酸系统</a><br>
+<a target="_blank" href="http://www.lubulai.com/trace.html" class="style1">基站定位 陆步来</a><br>
+
+<a target="_blank" href="https://github.com/stascorp/rdpwrap/releases/tag/v1.6.2">RDP Wrapper</a><br>
+<a target="_blank" href="https://github.com/sebaxakerhtc/rdpwrap.ini/blob/master/rdpwrap.ini" class="style1">rdpwrap.ini</a><br>
+
+
+
+<br>
+
+
+
+
+
+<br>
+
+</a>
+</p>
+  </td>
+
+ </tr>
+
+
+
+<tr><td>
+
+<center>
+
+
+常用办公平台
+
+
+<td><center>常用邮箱系统<td><center>村卫生室系统</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+    
+    <td colspan=3><center> 
+
+<div class="_zohy62up8kr"></div>
+    <script type="text/javascript">
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u6924975",
+            container: "_zohy62up8kr",
+            async: true
+        });
+    </script>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+    </script>
+
+
+
+    
+    <script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3698790",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+<tr>
+
+</table>
+
+
+
+</div>
+
+
+<center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;<H2><center><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.wowanka.com/123');" href="http://www.wowanka.com/123">如果您认为此页使用起来比较方便，请将此页设为首页！！！</a></center></H2></o:p></span></p>
+
+
+
+
+
+<a target="_blank" href=http://www.wowanka.com>访问我玩卡首页</a></center>
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKZd2WSU5PGV8RjIjTeY%2FvhF36KtIuz7ODFGN3TB39p2r1ZXSzTKtnGX7qlYC6hD0jS%2BnicdgCckKtv5m77oQENt8ds9VjgFF9M3FEPlTGcbdZ6u3A%3D" b2cid="" shopkeeperId="31175229" promotion="yes" class="pic detialLogo" target="_blank">
+
+凡客
+
+</a>
+
+
+
+
+
+
+
+
+<br>
+
+<center> 
+作者邮箱：<a target="_blank" href=mailto:admin@wowanka.com>admin@wowanka.com</a></center>
+
+有何建议，欢迎多多指教<br>
+
+</center>
+
+<div id="Layer1" style="position:absolute; width:0px; height:0px; z-index:1; left: 0; top: 0; visibility: hidden"> 
+<center> 
+
+</div> 
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+<a data-type="13" data-tmpl="628x100" data-tmplid="213" data-rd="2" data-style="1" data-border="1" href="#"></a>
+<br>
+<center> 
+<a target='_blank' href='http://www.5iads.cn?panglei77'><img border='0' src='http://www.5iads.cn/image/ad/468_60_1.gif' alt='http://www.5iads.cn我爱广告任务网'></a>
+
+<a target="_blank" href="/123/123.cmd.zip" class="style1">安装一键上网</a>
+<a target="_blank" href="http://www.9ht.com/xz/71616.html#addressWrap" class="style1">谷歌21</a>
+
+<br>
+<script type="text/javascript" src="//js.users.51.la/21763823.js"></script>
+</body>
+</html>
